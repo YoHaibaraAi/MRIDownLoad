@@ -67,6 +67,7 @@
 #rwj-dicom-downloader-root .rwj-dd-series label:last-child { border-bottom: 0; }
 #rwj-dicom-downloader-root .rwj-dd-series span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #rwj-dicom-downloader-root .rwj-dd-series em { color: #68758a; font-style: normal; }
+#rwj-dicom-downloader-root .rwj-dd-privacy-warning { margin: 11px 0; border: 1px solid #efb3b3; border-radius: 7px; background: #fff0f0; color: #8b2020; padding: 9px 10px; font-size: 12px; line-height: 1.5; }
 #rwj-dicom-downloader-root .rwj-dd-warning { margin: 11px 0; border-radius: 7px; background: #fff7df; color: #735a13; padding: 8px 9px; font-size: 12px; }
 #rwj-dicom-downloader-root .rwj-dd-primary { width: 100%; }
 #rwj-dicom-downloader-root .rwj-dd-progress-title { font-size: 16px; font-weight: 650; margin-bottom: 10px; }

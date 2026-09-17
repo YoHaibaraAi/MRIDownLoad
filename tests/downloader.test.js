@@ -16,7 +16,7 @@ test("sortByImageNumber sorts numerically without mutating input", () => {
   assert.deepEqual(input.map((item) => item.imageNumber), [10, 2, 1]);
 });
 
-test("ZIP filename excludes patient identity and sanitizes description", () => {
+test("ZIP filename uses the sanitized study description", () => {
   assert.equal(makeZipName({ studyDate: 20260915, studyDesc: "L/ANKLE" }), "20260915_L_ANKLE_DICOM.zip");
 });
 

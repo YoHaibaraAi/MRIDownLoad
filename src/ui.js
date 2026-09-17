@@ -111,6 +111,10 @@
         list.appendChild(label);
       });
 
+      const privacyWarning = document.createElement("div");
+      privacyWarning.className = "rwj-dd-privacy-warning";
+      privacyWarning.setAttribute("role", "alert");
+      privacyWarning.textContent = "隐私提醒：下载的是未脱敏的原始 DICOM，影像及元数据可能包含患者个人信息；ZIP 文件名和序列目录也可能包含检查描述。请仅保存到可信设备，不要公开分享原始文件。";
       const warning = document.createElement("div");
       warning.className = "rwj-dd-warning";
       warning.textContent = "DICOM 会先保存在内存中再生成 ZIP；大型检查请确保浏览器有足够可用内存。";
@@ -119,7 +123,7 @@
       download.className = "rwj-dd-primary";
       download.textContent = "下载选中的 DICOM";
       download.addEventListener("click", () => this.startDownload());
-      this.body.append(meta, list, warning, download);
+      this.body.append(meta, list, privacyWarning, warning, download);
     }
 
     selectedSeries() {

@@ -1,0 +1,20 @@
+{
+  "algorithm": "SM4-ECB-PKCS7",
+  "source": "Public SM4 example key and independent OpenSSL enc -sm4-ecb verification",
+  "helper_empty_string_behavior": "",
+  "undefined_ciphertext_hex": "f88607345ad3f7e847c9d06f57d39718",
+  "vectors": [
+    {
+      "key_hex": "0123456789abcdeffedcba9876543210",
+      "plaintext": "hello",
+      "ciphertext_hex": "db0669bd841e5450ec1652ecd42b6d60",
+      "note": "synthetic ASCII plaintext"
+    },
+    {
+      "key_hex": "0123456789abcdeffedcba9876543210",
+      "plaintext": "通用测试",
+      "ciphertext_hex": "306ec0b540b8ca0926146d91ba3617f8",
+      "note": "synthetic UTF-8 plaintext"
+    }
+  ]
+}

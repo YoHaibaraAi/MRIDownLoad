@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "影像云 DICOM 下载器",
+  "version": "0.1.0",
+  "description": "在已授权的影像云页面中，按序列下载当前检查的原始 DICOM 并本地打包。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://hos-turn-service.rwjiankang.com:5447/*"
+      ],
+      "js": [
+        "src/page-bridge.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://hos-turn-service.rwjiankang.com:5447/*"
+      ],
+      "css": [
+        "src/content.css"
+      ],
+      "js": [
+        "vendor/jszip.min.js",
+        "src/sm4.js",
+        "src/api.js",
+        "src/downloader.js",
+        "src/ui.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

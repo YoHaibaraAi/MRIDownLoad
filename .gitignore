@@ -1,0 +1,22 @@
+# Sensitive capture files
+*.har
+reference/
+CODEX_PROMPT.md
+docs/
+
+# Downloads / generated studies
+downloads/
+*.dcm
+*.zip
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Browser smoke-test artifacts (may contain temporary authorized URLs/session state)
+.playwright-cli/
+output/playwright/

@@ -1,0 +1,81 @@
+#rwj-dicom-downloader-root,
+#rwj-dicom-downloader-root * {
+  box-sizing: border-box;
+}
+
+#rwj-dicom-downloader-root {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2147483647;
+  color: #172033;
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+#rwj-dicom-downloader-root button {
+  border: 1px solid #c8d0dc;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 13px;
+}
+
+#rwj-dicom-downloader-root button:hover { background: #f4f7fb; }
+#rwj-dicom-downloader-root button:disabled { cursor: not-allowed; opacity: .55; }
+
+#rwj-dicom-downloader-root .rwj-dd-launch,
+#rwj-dicom-downloader-root .rwj-dd-primary {
+  border-color: #1769e0;
+  background: #1769e0;
+  color: #fff;
+  font-weight: 650;
+  box-shadow: 0 5px 18px rgb(23 105 224 / 28%);
+}
+
+#rwj-dicom-downloader-root .rwj-dd-launch:hover,
+#rwj-dicom-downloader-root .rwj-dd-primary:hover { background: #105bc7; }
+
+#rwj-dicom-downloader-root .rwj-dd-panel {
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  width: min(390px, calc(100vw - 28px));
+  max-height: min(640px, calc(100vh - 90px));
+  overflow: auto;
+  border: 1px solid #d9e0ea;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 14px 42px rgb(24 40 72 / 22%);
+}
+
+#rwj-dicom-downloader-root .rwj-dd-panel[hidden] { display: none; }
+#rwj-dicom-downloader-root header { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; border-bottom: 1px solid #e6ebf1; }
+#rwj-dicom-downloader-root header strong { font-size: 16px; }
+#rwj-dicom-downloader-root .rwj-dd-close { border: 0; padding: 0 5px; font-size: 23px; line-height: 1; }
+#rwj-dicom-downloader-root .rwj-dd-body { padding: 15px 16px 16px; }
+#rwj-dicom-downloader-root .rwj-dd-status { color: #59667a; padding: 13px 0; }
+#rwj-dicom-downloader-root .rwj-dd-error,
+#rwj-dicom-downloader-root .rwj-dd-inline-error { color: #a82828; margin-bottom: 12px; white-space: pre-wrap; }
+#rwj-dicom-downloader-root .rwj-dd-meta { display: grid; gap: 6px; margin-bottom: 13px; }
+#rwj-dicom-downloader-root .rwj-dd-meta div { display: flex; justify-content: space-between; gap: 18px; }
+#rwj-dicom-downloader-root .rwj-dd-meta span { color: #68758a; }
+#rwj-dicom-downloader-root .rwj-dd-meta b { max-width: 240px; overflow-wrap: anywhere; text-align: right; }
+#rwj-dicom-downloader-root .rwj-dd-series { max-height: 245px; overflow: auto; border: 1px solid #e3e8ef; border-radius: 8px; }
+#rwj-dicom-downloader-root .rwj-dd-series label { display: grid; grid-template-columns: 20px 1fr auto; gap: 7px; align-items: center; padding: 8px 9px; border-bottom: 1px solid #edf0f4; cursor: pointer; }
+#rwj-dicom-downloader-root .rwj-dd-series label:last-child { border-bottom: 0; }
+#rwj-dicom-downloader-root .rwj-dd-series span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#rwj-dicom-downloader-root .rwj-dd-series em { color: #68758a; font-style: normal; }
+#rwj-dicom-downloader-root .rwj-dd-warning { margin: 11px 0; border-radius: 7px; background: #fff7df; color: #735a13; padding: 8px 9px; font-size: 12px; }
+#rwj-dicom-downloader-root .rwj-dd-primary { width: 100%; }
+#rwj-dicom-downloader-root .rwj-dd-progress-title { font-size: 16px; font-weight: 650; margin-bottom: 10px; }
+#rwj-dicom-downloader-root progress { width: 100%; height: 12px; accent-color: #1769e0; }
+#rwj-dicom-downloader-root .rwj-dd-progress-details { display: grid; gap: 5px; margin: 12px 0; color: #4e5b6e; overflow-wrap: anywhere; }
+#rwj-dicom-downloader-root .rwj-dd-cancel { width: 100%; }
+#rwj-dicom-downloader-root .rwj-dd-done { margin-bottom: 12px; color: #17692f; }
+
+@media (max-width: 520px) {
+  #rwj-dicom-downloader-root { right: 14px; bottom: 14px; }
+  #rwj-dicom-downloader-root .rwj-dd-panel { right: -1px; bottom: 46px; }
+}
